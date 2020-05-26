@@ -1,0 +1,85 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note strong {
+  margin-right: 1rem;
+}
+
+.alert::first-letter {
+  text-transform: uppercase;
+}
+
+.alert-enter {
+  opacity: 0;
+}
+
+.alert-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.alert-exit {
+  opacity: 1;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  transition: opacity 350ms ease-out;
+}
+
+.note-exit-active {
+  animation: note 800ms ease-out forwards;
+}
+
+.note-enter-active {
+  animation: note 800ms ease-in alternate-reverse;
+}
+
+@keyframes note {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(30px);
+    opacity: .7;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.note small {
+  font-size: .9rem;
+  opacity: .5;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
+.navbar-nav .nav-link {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+
